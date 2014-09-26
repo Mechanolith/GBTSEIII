@@ -8,7 +8,7 @@ public class C_Movement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		logicGod = GameObject.Find ("A_Cogoitator").GetComponent<A_Logic_God>();
+		logicGod = GameObject.Find ("A_Cogitator").GetComponent<A_Logic_God>();
 	}
 	
 	// Update is called once per frame

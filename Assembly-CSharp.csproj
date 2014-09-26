@@ -46,12 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\A_Logic_God.cs" />
-     <Compile Include="Assets\A_ProgressBar_Test.cs" />
-     <Compile Include="Assets\C_Movement.cs" />
-     <Compile Include="Assets\C_Weapons.cs" />
-     <Compile Include="Assets\E_Kamikaze.cs" />
-     <Compile Include="Assets\W_Player_Laser.cs" />
+     <Compile Include="Assets\Scripts\A_Logic_God.cs" />
+     <Compile Include="Assets\Scripts\A_ProgressBar_Test.cs" />
+     <Compile Include="Assets\Scripts\C_Movement.cs" />
+     <Compile Include="Assets\Scripts\C_Weapons.cs" />
+     <Compile Include="Assets\Scripts\E_Kamikaze.cs" />
+     <Compile Include="Assets\Scripts\W_Player_Laser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

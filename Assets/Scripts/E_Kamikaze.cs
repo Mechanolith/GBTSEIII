@@ -10,7 +10,7 @@ public class E_Kamikaze : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		logicGod = GameObject.Find ("A_Cogoitator").GetComponent<A_Logic_God>();
+		logicGod = GameObject.Find("A_Cogitator").GetComponent<A_Logic_God>();
 	}
 	
 	// Update is called once per frame
@@ -31,17 +31,17 @@ public class E_Kamikaze : MonoBehaviour {
 		//MoveSpeed -= DeathThrowsSpeed; //Maybe implement later. Speed up/slow down before death.
 		
 		float EndTime=Time.time + countdown;
-		halo.enabled = false;
+		//halo.enabled = false;
 		while(Time.time < EndTime){
-			halo.enabled = true;
-			AudioSource.PlayClipAtPoint(beep, transform.position);
+			//halo.enabled = true;
+			//AudioSource.PlayClipAtPoint(beep, transform.position);
 			yield return new WaitForSeconds(0.2F);
-			halo.enabled = false;
+			//halo.enabled = false;
 			yield return new WaitForSeconds(0.2F);
 		}
-		AudioSource.PlayClipAtPoint(explode, transform.position);
+		//AudioSource.PlayClipAtPoint(explode, transform.position);
 		if (lookDirection.magnitude < 3) {
-
+			//Do damage if the player is within range of the explosion
 		}
 		Destroy (gameObject);
 	}
