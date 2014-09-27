@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class E_Kamikaze : MonoBehaviour {
-	public float moveSpeed,dragScale,initialDrag,countdown,deathThrowsSpeed,suicideHP;
+	public float moveSpeed,dragScale,initialDrag,countdown,deathThrowsSpeed,suicideHP, triggerDistance, explosionSize;
 	public Vector3 target,lookDirection;
 	public Behaviour halo;
 	public AudioClip explode,beep;
@@ -22,7 +22,7 @@ public class E_Kamikaze : MonoBehaviour {
 		rigidbody.AddForce(transform.up * moveSpeed, ForceMode.Force);
 		rigidbody.drag = rigidbody.velocity.magnitude * dragScale + initialDrag;
 		
-		if (lookDirection.magnitude < 3) {
+		if (lookDirection.magnitude < triggerDistance) {
 			StartCoroutine(Detonate());
 		}
 	}
@@ -31,16 +31,16 @@ public class E_Kamikaze : MonoBehaviour {
 		//MoveSpeed -= DeathThrowsSpeed; //Maybe implement later. Speed up/slow down before death.
 		
 		float EndTime=Time.time + countdown;
-		//halo.enabled = false;
+		halo.enabled = false;
 		while(Time.time < EndTime){
-			//halo.enabled = true;
+			halo.enabled = true;
 			//AudioSource.PlayClipAtPoint(beep, transform.position);
 			yield return new WaitForSeconds(0.2F);
-			//halo.enabled = false;
+			halo.enabled = false;
 			yield return new WaitForSeconds(0.2F);
 		}
 		//AudioSource.PlayClipAtPoint(explode, transform.position);
-		if (lookDirection.magnitude < 3) {
+		if (lookDirection.magnitude < explosionSize) {
 			//Do damage if the player is within range of the explosion
 		}
 		Destroy (gameObject);
