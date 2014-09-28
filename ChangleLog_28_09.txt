@@ -1,0 +1,23 @@
+Changelog
+
+Shotgunner. 
+	Changed the move speed to 13 from 15, noticed a little difference and prefer the speed where its hard to predict where to shoot due to being a different speed than the kamikaze for example. 
+
+	Circle Speed was halved. I had trouble shooting the shotgunner whilst it was strafing around me as it moved too fast to both aim and move yourself. 
+	
+	Max circle distance was also closed to 7.5 so the shotgunner won't get as close as the kamikaze and but will be a considerable distance. 
+
+Kamikaze
+	Added in Kamikaze with values
+
+	Move Speed : 15
+	Drag SCale : 0.5
+	Initial Drag : 2
+	Countdown : 3
+	Death Throws Speed : 0 ???
+	Suicide HP : 0
+	Trigger Distance : 0 (The variable halo  of E_Kamikaze has not been assigned)
+	Explosion size : 0
+	
+
+Added Blocks to the scene, including walls so its an enclosed arena. AI have no idea what to do with the blocks. They treat them like they don't exist. 
