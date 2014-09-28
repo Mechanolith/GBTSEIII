@@ -48,12 +48,15 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\A_Logic_God.cs" />
      <Compile Include="Assets\Scripts\A_ProgressBar_Test.cs" />
+     <Compile Include="Assets\Scripts\A_Spawn_God.cs" />
      <Compile Include="Assets\Scripts\A_Stats_God.cs" />
+     <Compile Include="Assets\Scripts\C_Camera.cs" />
      <Compile Include="Assets\Scripts\C_Movement.cs" />
      <Compile Include="Assets\Scripts\C_Weapons.cs" />
      <Compile Include="Assets\Scripts\E_Dodger.cs" />
      <Compile Include="Assets\Scripts\E_Kamikaze.cs" />
      <Compile Include="Assets\Scripts\E_Shotgunner.cs" />
+     <Compile Include="Assets\Scripts\E_Spawner.cs" />
      <Compile Include="Assets\Scripts\W_Enemy_Laser.cs" />
      <Compile Include="Assets\Scripts\W_Player_Laser.cs" />
      <Compile Include="Assets\Scripts\W_Shotgun_Test.cs" />

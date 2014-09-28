@@ -22,5 +22,9 @@ public class W_Enemy_Laser : MonoBehaviour {
 			statsGod.DamagePlayer(shotType);
 			Destroy(gameObject);
 		}
+
+		if(col.tag != "Enemy"  && col.tag != "Projectile"){
+			Destroy(gameObject);
+		}
 	}
 }
