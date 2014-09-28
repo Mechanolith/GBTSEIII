@@ -25,7 +25,7 @@ public class W_Shotgun_Test : MonoBehaviour {
 				shotPosX = (shotRadius * Mathf.Sin(currentAngle)) + transform.position.x;		//Find the position to spawn it at
 				shotPosY = (shotRadius * Mathf.Cos(currentAngle)) + transform.position.y;
 				shotPosition = new Vector3(shotPosX,shotPosY,0);
-				shotRotation = Quaternion.Euler(0,0,-currentAngle + transform.eulerAngles.z);	//Find the angle to spawn it at
+				shotRotation = Quaternion.Euler(0,0,currentAngle + transform.eulerAngles.z);	//Find the angle to spawn it at
 				Instantiate(shot, shotPosition, shotRotation);		//Spawn it at the right position and angle
 			}
 		}

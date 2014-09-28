@@ -1,27 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class W_Player_Laser : MonoBehaviour {
-	public float moveSpeed, damage;
-
+public class W_Enemy_Laser : MonoBehaviour {
+	public float moveSpeed;
+	public A_Stats_God statsGod;
+	public A_Stats_God.EnemyTypes shotType;
 
 	// Use this for initialization
 	void Start () {
+		statsGod = GameObject.Find("A_Cogitator").GetComponent<A_Stats_God>();
 		rigidbody.velocity = transform.up * moveSpeed;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 
 	void OnTriggerEnter(Collider col){
-		if(col.tag == "Enemy"){
-			//Make the bad guy take damage
-			col.SendMessage("TakeDamage");
-		}
-
-		if(col.tag != "Player"  && col.tag != "Projectile"){
+		if(col.tag == "Player"){
+			statsGod.DamagePlayer(shotType);
 			Destroy(gameObject);
 		}
 	}

@@ -3,14 +3,20 @@ using System.Collections;
 
 public class E_Shotgunner : MonoBehaviour {
 	public float moveSpeed, dragScale, initialDrag, maxCircleDistance, circleSpeed, directionTime, rateOfFire;
-	float coolDown, circleTimer;
+	float coolDown, circleTimer, HP;
 	int circleDirection;
 	Vector3 target, lookDirection;
 	public A_Logic_God logicGod;
+	public A_Stats_God statsGod;
 
 	// Use this for initialization
 	void Start () {
 		logicGod = GameObject.Find("A_Cogitator").GetComponent<A_Logic_God>();
+		statsGod = GameObject.Find("A_Cogitator").GetComponent<A_Stats_God>();
+		
+		HP = statsGod.baseShotgunHP * statsGod.enemyHPMulti;
+		//damage = statsGod.baseShotgunDmg * statsGod.enemyDamageMulti;
+
 		circleDirection = 1;
 	}
 	
@@ -33,6 +39,14 @@ public class E_Shotgunner : MonoBehaviour {
 		else{
 			rigidbody.AddForce(transform.up * moveSpeed, ForceMode.Force);
 			rigidbody.drag = rigidbody.velocity.magnitude * dragScale + initialDrag;
+		}
+	}
+
+	void TakeDamage(){
+		HP -= statsGod.playerDamage;
+		
+		if (HP <= 0){
+			Destroy(gameObject);
 		}
 	}
 }

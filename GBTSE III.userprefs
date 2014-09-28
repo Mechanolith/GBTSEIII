@@ -1,11 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\W_Shotgun_Test.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\A_Stats_God.cs">
     <Files>
-      <File FileName="Assets\Scripts\E_Dodger.cs" Line="11" Column="30" />
-      <File FileName="Assets\Scripts\E_Kamikaze.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\E_Shotgunner.cs" Line="30" Column="21" />
-      <File FileName="Assets\Scripts\W_Shotgun_Test.cs" Line="25" Column="40" />
+      <File FileName="Assets\Scripts\E_Dodger.cs" Line="64" Column="3" />
+      <File FileName="Assets\Scripts\E_Kamikaze.cs" Line="62" Column="3" />
+      <File FileName="Assets\Scripts\E_Shotgunner.cs" Line="51" Column="3" />
+      <File FileName="Assets\Scripts\W_Shotgun_Test.cs" Line="28" Column="41" />
+      <File FileName="Assets\Scripts\A_Stats_God.cs" Line="20" Column="5" />
+      <File FileName="Assets\Scripts\C_Movement.cs" Line="12" Column="3" />
+      <File FileName="Assets\Scripts\W_Enemy_Laser.cs" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\W_Player_Laser.cs" Line="21" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
