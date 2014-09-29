@@ -57,6 +57,7 @@ public class E_Kamikaze : MonoBehaviour {
 		HP -= statsGod.playerDamage;
 		
 		if (HP <= 0){
+			statsGod.KamikazeKill();
 			Destroy(gameObject);
 		}
 	}

@@ -10,7 +10,7 @@ public class C_Camera: MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		distanceVector = A_Logic_God.inst.playerPosition - transform.position;
 		distanceVector.z = 0;
 		transform.Translate(Vector3.Normalize(distanceVector)*Time.deltaTime*distanceVector.magnitude*2);

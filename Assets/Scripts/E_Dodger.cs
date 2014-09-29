@@ -59,6 +59,7 @@ public class E_Dodger : MonoBehaviour {
 		HP -= statsGod.playerDamage;
 
 		if (HP <= 0){
+			statsGod.DodgerKill();
 			Destroy(gameObject);
 		}
 	}
