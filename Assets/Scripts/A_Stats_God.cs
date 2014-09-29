@@ -13,30 +13,43 @@ public class A_Stats_God : MonoBehaviour {
 		Dodger,
 		Shotgunner
 	}
-
-	// Use this for initialization
+	
 	void Start () {
 		enemyHPMulti = 1;
 		enemyDamageMulti = 1;
 		scoreMulti = 1;
-		//playerHP = PlayerPrefs.GetFloat("PlayerHP");
-		//playerDamage = PlayerPrefs.GetFloat("PlayerDamage");
-		playerHP = 100;
-		playerDamage = 100;
+		playerHP = PlayerPrefs.GetFloat("playerHealth");
+		playerDamage = PlayerPrefs.GetFloat("playerDamage") + PlayerPrefs.GetFloat("playerLaserDamage");
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		timer += Time.deltaTime;
 
+		//Scaling Difficulty
 		if(timer > difficultyStepTime){
-			enemyHPMulti *= HPMultiMulti;
+			enemyHPMulti *= HPMultiMulti;	//Increase health/damage multiplier by a given amount (multimulti)
 			enemyDamageMulti *= damageMultiMulti;
 			scoreMulti += scoreStep;
 			timer = 0;
 		}
-	}
 
+		//Weapon Changes
+		if(Input.GetKeyDown(KeyCode.Alpha1)){
+			playerDamage = PlayerPrefs.GetFloat("playerDamage") + PlayerPrefs.GetFloat("playerLaserDamage");
+			//CHANGE WEAPON TYPE/BEHAVIOUR HERE
+		}
+
+		if(Input.GetKeyDown(KeyCode.Alpha2)){
+			playerDamage = PlayerPrefs.GetFloat("playerDamage") + PlayerPrefs.GetFloat("playerShotgunDamage");
+			//CHANGE WEAPON TYPE/BEHAVIOUR HERE
+		}
+
+		if(Input.GetKeyDown(KeyCode.Alpha3)){
+			playerDamage = PlayerPrefs.GetFloat("playerDamage") + PlayerPrefs.GetFloat("playerRocketDamage");
+			//CHANGE WEAPON TYPE/BEHAVIOUR HERE
+		}
+	}
+	
 	public void DamagePlayer(EnemyTypes dmgType){
 		switch(dmgType){
 			case EnemyTypes.Kamikaze:
@@ -55,9 +68,9 @@ public class A_Stats_God : MonoBehaviour {
 			break;
 		}
 
+		//Lose State
 		if (playerHP <= 0){
-			//Lose State
-			print ("YOU LOSE.");
+			print ("YOU LOSE, DWEEBLORD.");
 			PlayerPrefs.SetFloat("currentScore",score);
 			Application.LoadLevel("EndGame");
             //Trigger End scene

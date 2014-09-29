@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class A_Spawn_God : MonoBehaviour {
-	public float roll, outcome, dodgerChance, kamikazeChance;
-	public float timer, spawnTime;
+	public float roll, outcome, dodgerChance, kamikazeChance;	//NOTE: Chances work such that 0 to dodgeChance = dodge, kamikazeChance to 100 = kamikaze, dodgeChance+1 to kamikazeChance-1 = shotgun
+	public float timer, spawnTime;								//...if that makes sense.
 	
 	// Use this for initialization
 	void Start () {
@@ -33,8 +33,8 @@ public class A_Spawn_God : MonoBehaviour {
 	void PickSpawn(A_Stats_God.EnemyTypes type){
 		int index;
 		
-		index = Random.Range (0, transform.childCount);
+		index = Random.Range (0, transform.childCount);		//Picks a number
 		
-		transform.GetChild (index).GetComponent<E_Spawner>().SpawnFoe(type);
+		transform.GetChild (index).GetComponent<E_Spawner>().SpawnFoe(type);	//Grabs that child and tells it to make an enemy
 	}
 }

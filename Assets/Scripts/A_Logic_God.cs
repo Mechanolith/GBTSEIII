@@ -8,6 +8,7 @@ public class A_Logic_God : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		inst = this;
+		PlayerPrefs.SetFloat("currentScore", 0);
 	}
 	
 	// Update is called once per frame

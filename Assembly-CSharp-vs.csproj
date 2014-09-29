@@ -49,9 +49,12 @@
      <Compile Include="Assets\Scripts\A_Endgame_Buttons.cs" />
      <Compile Include="Assets\Scripts\A_Endgame_Logic.cs" />
      <Compile Include="Assets\Scripts\A_Logic_God.cs" />
+     <Compile Include="Assets\Scripts\A_MainMenu.cs" />
      <Compile Include="Assets\Scripts\A_ProgressBar_Test.cs" />
      <Compile Include="Assets\Scripts\A_Spawn_God.cs" />
      <Compile Include="Assets\Scripts\A_Stats_God.cs" />
+     <Compile Include="Assets\Scripts\A_Upgrade_Buttons.cs" />
+     <Compile Include="Assets\Scripts\A_Upgrade_God.cs" />
      <Compile Include="Assets\Scripts\C_Camera.cs" />
      <Compile Include="Assets\Scripts\C_Movement.cs" />
      <Compile Include="Assets\Scripts\C_Weapons.cs" />

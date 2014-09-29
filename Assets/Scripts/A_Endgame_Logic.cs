@@ -6,10 +6,8 @@ public class A_Endgame_Logic : MonoBehaviour {
 	int upgPoints;
 	float curXP, xpGained, levelXP, lastScore;
 	TextMesh pointsText, xpText, xpBarText, levelUpText, statPointsText;
-
-	// Use this for initialization
-	void Start () {
-		PlayerPrefs.SetFloat("xpToLevel", 100); //PURELY FOR TESTING. REMOVE ONCE MENU IS INTEGRATED AND INITIAL SETUP IS DONE.
+	
+	void Start () {		//Set up all the things
 		lastScore = PlayerPrefs.GetFloat("currentScore");
 		curXP = PlayerPrefs.GetFloat("currentXP");
 		levelXP = PlayerPrefs.GetFloat("xpToLevel");
@@ -21,8 +19,10 @@ public class A_Endgame_Logic : MonoBehaviour {
 		levelUpText = GameObject.Find("T_LevelUp_Text").gameObject.GetComponent<TextMesh>();
 		statPointsText = GameObject.Find("T_StatPoints_Text").gameObject.GetComponent<TextMesh>();
 
-		xpGained = Mathf.Round(lastScore/10);
+		//Work out XP
+		xpGained = Mathf.Round(lastScore/10);	//score/10 is an arbitrary calculation, change as necessary for balance
 
+		//Set up the text
 		pointsText.text = "" + lastScore;
 		xpText.text = "+ " + xpGained + " XP";
 
@@ -30,16 +30,17 @@ public class A_Endgame_Logic : MonoBehaviour {
 		PlayerPrefs.SetFloat("currentXP", curXP);
 		xpBarText.text = "" + curXP + "/" + levelXP;
 
+		//Check for levelup
 		if(curXP > levelXP){
 			levelUpText.renderer.enabled = true;
 			statPointsText.renderer.enabled = true;
-			curXP -= levelXP;
+			curXP -= levelXP;	//Bring current XP back down
 			PlayerPrefs.SetFloat("currentXP", curXP);
 
-			levelXP *= 1.5f;
+			levelXP *= 1.5f;	//This determines how much XP will be needed for the next levelup
 			PlayerPrefs.SetFloat("xpToLevel", levelXP);
 
-			upgPoints += pointsPerLvl;
+			upgPoints += pointsPerLvl;		//Give 'em a point!
 			PlayerPrefs.SetInt("statPoints", upgPoints);
 		}
 	}
