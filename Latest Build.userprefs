@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\W_Player_Shotgun.cs">
+    <Files>
+      <File FileName="Assets\Scripts\E_Shotgunner_Weapon.cs" Line="38" Column="2" />
+      <File FileName="Assets\Scripts\A_Upgrade_God.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\C_Weapons.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\W_Player_Laser.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\W_Player_RPG.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\A_Stats_God.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\W_Player_Shotgun.cs" Line="33" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

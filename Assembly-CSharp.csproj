@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{B7B24D3A-FFB2-5174-1BF4-36E6EC22A0EA}</ProjectGuid>
+	<ProjectGuid>{16F02C8E-2D40-E3AB-7588-F132F24686D9}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,15 +46,27 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\A_Endgame_Buttons.cs" />
+     <Compile Include="Assets\Scripts\A_Endgame_Logic.cs" />
      <Compile Include="Assets\Scripts\A_Logic_God.cs" />
+     <Compile Include="Assets\Scripts\A_MainMenu.cs" />
      <Compile Include="Assets\Scripts\A_ProgressBar_Test.cs" />
+     <Compile Include="Assets\Scripts\A_Spawn_God.cs" />
+     <Compile Include="Assets\Scripts\A_Stats_God.cs" />
+     <Compile Include="Assets\Scripts\A_Upgrade_Buttons.cs" />
+     <Compile Include="Assets\Scripts\A_Upgrade_God.cs" />
      <Compile Include="Assets\Scripts\C_Camera.cs" />
      <Compile Include="Assets\Scripts\C_Movement.cs" />
      <Compile Include="Assets\Scripts\C_Weapons.cs" />
      <Compile Include="Assets\Scripts\E_Dodger.cs" />
      <Compile Include="Assets\Scripts\E_Kamikaze.cs" />
      <Compile Include="Assets\Scripts\E_Shotgunner.cs" />
+     <Compile Include="Assets\Scripts\E_Shotgunner_Weapon.cs" />
+     <Compile Include="Assets\Scripts\E_Spawner.cs" />
+     <Compile Include="Assets\Scripts\W_Enemy_Laser.cs" />
      <Compile Include="Assets\Scripts\W_Player_Laser.cs" />
+     <Compile Include="Assets\Scripts\W_Player_RPG.cs" />
+     <Compile Include="Assets\Scripts\W_Player_Shotgun.cs" />
      <Compile Include="Assets\Scripts\W_Shotgun_Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

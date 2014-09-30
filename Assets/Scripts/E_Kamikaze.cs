@@ -2,15 +2,21 @@
 using System.Collections;
 
 public class E_Kamikaze : MonoBehaviour {
-	public float moveSpeed,dragScale,initialDrag,countdown,deathThrowsSpeed,suicideHP, triggerDistance, explosionSize;
+	public float moveSpeed,dragScale,initialDrag,countdown,deathThrowsSpeed, triggerDistance, explosionSize;
+	float HP;
 	public Vector3 target,lookDirection;
 	public Behaviour halo;
 	public AudioClip explode,beep;
 	public A_Logic_God logicGod;
+	public A_Stats_God statsGod;
 
 	// Use this for initialization
 	void Start () {
 		logicGod = GameObject.Find("A_Cogitator").GetComponent<A_Logic_God>();
+		statsGod = GameObject.Find("A_Cogitator").GetComponent<A_Stats_God>();
+		
+		HP = statsGod.baseKamikazeHP * statsGod.enemyHPMulti;
+		//damage = statsGod.baseKamikazeDmg * statsGod.enemyDamageMulti;
 	}
 	
 	// Update is called once per frame
@@ -42,7 +48,17 @@ public class E_Kamikaze : MonoBehaviour {
 		//AudioSource.PlayClipAtPoint(explode, transform.position);
 		if (lookDirection.magnitude < explosionSize) {
 			//Do damage if the player is within range of the explosion
+			statsGod.DamagePlayer(A_Stats_God.EnemyTypes.Kamikaze);
 		}
 		Destroy (gameObject);
+	}
+
+	void TakeDamage(){
+		HP -= statsGod.playerDamage;
+		
+		if (HP <= 0){
+			statsGod.KamikazeKill();
+			Destroy(gameObject);
+		}
 	}
 }

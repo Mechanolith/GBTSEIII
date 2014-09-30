@@ -18,6 +18,7 @@ public class W_Player_Laser : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 		if(col.tag == "Enemy"){
 			//Make the bad guy take damage
+			col.SendMessage("TakeDamage");
 		}
 
 		if(col.tag != "Player"  && col.tag != "Projectile"){
