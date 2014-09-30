@@ -7,11 +7,18 @@ public class A_Stats_God : MonoBehaviour {
 	public float timer, playerHP, playerDamage;
 	public float dodgerScore, kamikazeScore, shotgunnerScore, scoreMulti, scoreStep;
 	public float score;
+	public WeaponTypes weaponType;
 
 	public enum EnemyTypes{
 		Kamikaze,
 		Dodger,
 		Shotgunner
+	}
+
+	public enum WeaponTypes{
+		Laser,
+		Shotgun,
+		RPG
 	}
 	
 	void Start () {
@@ -20,6 +27,7 @@ public class A_Stats_God : MonoBehaviour {
 		scoreMulti = 1;
 		playerHP = PlayerPrefs.GetFloat("playerHealth");
 		playerDamage = PlayerPrefs.GetFloat("playerDamage") + PlayerPrefs.GetFloat("playerLaserDamage");
+		weaponType = WeaponTypes.Laser;
 	}
 
 	void Update () {
@@ -36,17 +44,17 @@ public class A_Stats_God : MonoBehaviour {
 		//Weapon Changes
 		if(Input.GetKeyDown(KeyCode.Alpha1)){
 			playerDamage = PlayerPrefs.GetFloat("playerDamage") + PlayerPrefs.GetFloat("playerLaserDamage");
-			//CHANGE WEAPON TYPE/BEHAVIOUR HERE
+			weaponType = WeaponTypes.Laser;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Alpha2)){
 			playerDamage = PlayerPrefs.GetFloat("playerDamage") + PlayerPrefs.GetFloat("playerShotgunDamage");
-			//CHANGE WEAPON TYPE/BEHAVIOUR HERE
+			weaponType = WeaponTypes.Shotgun;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Alpha3)){
 			playerDamage = PlayerPrefs.GetFloat("playerDamage") + PlayerPrefs.GetFloat("playerRocketDamage");
-			//CHANGE WEAPON TYPE/BEHAVIOUR HERE
+			weaponType = WeaponTypes.RPG;
 		}
 	}
 	

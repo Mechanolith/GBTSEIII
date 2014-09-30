@@ -1,15 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\E_Shotgunner_Weapon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\C_Weapons.cs">
     <Files>
-      <File FileName="Assets\Scripts\A_Stats_God.cs" Line="73" Column="31" />
-      <File FileName="Assets\Scripts\A_Endgame_Logic.cs" Line="43" Column="50" />
-      <File FileName="Assets\Scripts\A_MainMenu.cs" Line="7" Column="1" />
-      <File FileName="Assets\Scripts\A_Upgrade_God.cs" Line="42" Column="117" />
-      <File FileName="Assets\Scripts\A_Upgrade_Buttons.cs" Line="13" Column="3" />
-      <File FileName="Assets\Scripts\A_Spawn_God.cs" Line="41" Column="1" />
-      <File FileName="Assets\Scripts\E_Spawner.cs" Line="15" Column="42" />
-      <File FileName="Assets\Scripts\E_Shotgunner_Weapon.cs" Line="26" Column="3" />
+      <File FileName="Assets\Scripts\C_Weapons.cs" Line="35" Column="13" />
+      <File FileName="Assets\Scripts\W_Shotgun_Test.cs" Line="38" Column="1" />
+      <File FileName="Assets\Scripts\E_Shotgunner_Weapon.cs" Line="29" Column="66" />
+      <File FileName="Assets\Scripts\W_RPG.cs" Line="27" Column="8" />
+      <File FileName="Assets\Scripts\W_Player_Laser.cs" Line="22" Column="4" />
+      <File FileName="Assets\Scripts\E_Dodger.cs" Line="21" Column="73" />
+      <File FileName="Assets\Scripts\E_Shotgunner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\E_Kamikaze.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\A_Stats_God.cs" Line="10" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

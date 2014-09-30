@@ -18,7 +18,7 @@ public class W_Shotgun_Test : MonoBehaviour {
 	void Update () {
 		if(Input.GetKey(KeyCode.Mouse1)){
 			angleStep = 180/(shotNumber+1);					//Find how much space there is between each shot
-			currentAngle = transform.eulerAngles.z + 270;	//Set the leftmost point of the arc
+			currentAngle = -transform.eulerAngles.z + 270;	//Set the leftmost point of the arc
 			print ("Initial Angle = " + currentAngle);
 
 			for(int i = 0; i < shotNumber; i++){

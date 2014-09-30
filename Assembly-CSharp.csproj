@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\E_Spawner.cs" />
      <Compile Include="Assets\Scripts\W_Enemy_Laser.cs" />
      <Compile Include="Assets\Scripts\W_Player_Laser.cs" />
+     <Compile Include="Assets\Scripts\W_RPG.cs" />
      <Compile Include="Assets\Scripts\W_Shotgun_Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
