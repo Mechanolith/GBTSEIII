@@ -53,11 +53,11 @@ public class C_Weapons : MonoBehaviour {
 		
 		for(int i = 0; i < shotNumber; i++){
 			currentAngle += angleStep;		//Move to the next shot trajectory
-			print ("Shot " + i + " = " + currentAngle);
+			//print ("Shot " + i + " = " + currentAngle);
 			shotPosX = (shotRadius * Mathf.Sin(currentAngle * Mathf.Deg2Rad)) + transform.position.x;		//Find the position to spawn it at
 			shotPosY = (shotRadius * Mathf.Cos(currentAngle * Mathf.Deg2Rad)) + transform.position.y;
-			print ("Shot " + i + " Ang = " + currentAngle * Mathf.Deg2Rad);
-			print ("Shot " + i + " X = " + shotPosX + " Y = " + shotPosY);
+			//print ("Shot " + i + " Ang = " + currentAngle * Mathf.Deg2Rad);
+			//print ("Shot " + i + " X = " + shotPosX + " Y = " + shotPosY);
 			shotPosition = new Vector3(shotPosX,shotPosY,0);
 			shotRotation = Quaternion.Euler(0,0,-currentAngle);		//Find the angle to spawn it at
 			Instantiate(buckshot, shotPosition, shotRotation);		//Spawn it at the right position and angle
